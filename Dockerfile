@@ -9,3 +9,8 @@ RUN apk add ca-certificates gcc g++ curl openblas-dev
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 
 RUN pip install --no-cache-dir numpy scipy
+
+RUN apk add chromium
+WORKDIR /usr/src/app
+ENV CHROME_BIN=/usr/bin/chromium-browser \
+    CHROME_PATH=/usr/lib/chromium/
