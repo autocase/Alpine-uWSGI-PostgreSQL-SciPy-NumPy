@@ -9,3 +9,4 @@ RUN apk add ca-certificates gcc g++ curl openblas-dev
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 
 RUN pip install --no-cache-dir numpy scipy
+RUN pip install --no-cache-dir pandas
